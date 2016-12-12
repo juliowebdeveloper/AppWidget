@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_configuration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    tools:context="shido.com.appwidget.ConfigurationActivity">
+
+
+    <RadioGroup
+        android:layout_weight="0"
+        android:id="@+id/radioGroupSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RadioButton
+        android:layout_weight="0"
+        android:text="One Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radio1Button"
+        android:checked="false"/>
+
+    <RadioButton
+        android:layout_weight="0"
+
+        android:checked="true"
+        android:text="Two Buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:id="@+id/radio2Button" />
+    </RadioGroup>
+
+    <Button
+        android:text="Done"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignEnd="@+id/radioGroup"
+        android:id="@+id/btnChangeConfiguration" />
+</LinearLayout>

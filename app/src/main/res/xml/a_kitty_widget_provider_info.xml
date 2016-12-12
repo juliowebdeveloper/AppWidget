@@ -4,8 +4,9 @@
     android:minHeight="180dp"
     android:previewImage="@drawable/blackcaticon"
     android:initialLayout="@layout/a_simple_kitty_widget"
+    android:configure="shido.com.appwidget.ConfigurationActivity"
     android:widgetCategory="home_screen">
-
+<!-- Configure irá procurar a activity que será responsavel pela configuração do layout xml de acordo com o que for selecionado-->
 
 
 </appwidget-provider>

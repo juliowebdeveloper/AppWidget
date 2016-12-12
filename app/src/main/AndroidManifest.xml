@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShowImageActivity" android:label="Show image"
+        <activity
+            android:name=".ShowImageActivity"
+            android:label="Show image"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -26,17 +28,28 @@
             android:name=".AKittyWidget"
             android:enabled="true"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <!-- Agora a widget irá olhar para todos os WidgetProvider Broadcasts além desse que adicionamos - Action de Update -->
+                <action android:name="shido.com.appwidget.action.EXPLICIT_UPDATE" />
             </intent-filter>
-            <meta-data android:name="android.appwidget.provider"
+
+            <meta-data
+                android:name="android.appwidget.provider"
                 android:resource="@xml/a_kitty_widget_provider_info" />
         </receiver>
 
 
+        <!--Activity responsavel pela configuração da widget -->
+        <activity android:name=".ConfigurationActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+
+            </intent-filter>
 
 
+
+        </activity>
     </application>
 
 </manifest>
